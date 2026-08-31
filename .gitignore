@@ -22,3 +22,5 @@ week-1/data/*.csv
 # OS files
 .DS_Store
 Thumbs.db
+
+week-2/features/

@@ -1,0 +1,5 @@
+Model,Stage,Accuracy,Precision,Recall,F1-score,CV Best Accuracy,Best Parameters
+Naive Bayes,Baseline,0.9731781996325781,0.9845686228664952,0.9649404216315307,0.9746557111445434,,
+Logistic Regression,Baseline,0.9819350887936313,0.9766022380467956,0.9899175068744271,0.9832147937411095,,
+Naive Bayes,Tuned,0.9832210655235762,0.9932322053675613,0.9752520623281393,0.9841600184992485,0.9821185278615164,"{'classifier__alpha': 0.1, 'tfidf__min_df': 2, 'tfidf__ngram_range': (1, 2)}"
+Logistic Regression,Tuned,0.9864666258420086,0.983407205364246,0.9914069660861595,0.9873908826382153,0.9850885744757882,"{'classifier__C': 2.0, 'classifier__class_weight': 'balanced', 'tfidf__min_df': 2, 'tfidf__ngram_range': (1, 2)}"
