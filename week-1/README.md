@@ -147,7 +147,7 @@ Arch_Tech_Internship/
     │   ├── spam_raw.csv       # Local only - ignored by Git
     │   └── spam_cleaned.csv   # Generated locally - ignored by Git
     │
-    ├── notebooks/
+    ├
     │
     ├── src/
     │   └── preprocess.py
