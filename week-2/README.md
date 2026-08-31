@@ -121,8 +121,9 @@ week-2/
 │
 ├── README.md
 └── requirements.txt
+```
 
-Conclusion
+## Conclusion
 
 Both Naive Bayes and Logistic Regression performed well on the spam
 classification task. After hyperparameter tuning, Logistic Regression
