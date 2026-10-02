@@ -1,21 +1,17 @@
-# Python virtual environment
-.venv/
-venv/
-
-# Python cache
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Virtual environment
+.venv/
+venv/
+env/
 
 # Jupyter
 .ipynb_checkpoints/
 
-# Environment variables
-.env
-
-# Dataset files
-week-1/data/*.csv
-
-# IDE files
+# IDE
 .vscode/
 .idea/
 
@@ -23,4 +19,5 @@ week-1/data/*.csv
 .DS_Store
 Thumbs.db
 
-week-2/features/
+# Environment variables
+.env

@@ -1,0 +1,61 @@
+FINAL MODEL TEST RESULTS SUMMARY
+======================================================================
+Task: Task 4 - Iris Flower Classification (UCI Iris Dataset)
+Internship: Arch Technologies, Machine Learning Domain, Month 2
+Author: Sharjeel Shahzad
+Model Architecture: Support Vector Classifier (Tuned RBF Kernel)
+Evaluation Dataset: Held-out Test Set (30 instances: 10 Setosa, 9 Versicolor, 11 Virginica)
+Date: 2026-09-18
+======================================================================
+
+1. OVERALL TEST PERFORMANCE METRICS:
+----------------------------------------------------------------------
+- Overall Test Accuracy:        100.00% (30 / 30 correct predictions)
+- Macro-Averaged Precision:     1.0000 (100.00%)
+- Macro-Averaged Recall:        1.0000 (100.00%)
+- Macro-Averaged F1-Score:      1.0000 (100.00%)
+- Misclassified Instances:      0
+
+2. DETAILED CLASSIFICATION REPORT:
+----------------------------------------------------------------------
+                 precision    recall  f1-score   support
+
+    Iris-setosa     1.0000    1.0000    1.0000        10
+Iris-versicolor     1.0000    1.0000    1.0000         9
+ Iris-virginica     1.0000    1.0000    1.0000        11
+
+       accuracy                         1.0000        30
+      macro avg     1.0000    1.0000    1.0000        30
+   weighted avg     1.0000    1.0000    1.0000        30
+
+
+3. TEST SET CONFUSION MATRIX:
+----------------------------------------------------------------------
+Actual \ Predicted     Setosa    Versicolor    Virginica
+  Setosa                  10           0            0
+  Versicolor               0           9            0
+  Virginica                0           0           11
+
+4. REPRESENTATIVE FLOWER INFERENCE TABLE:
+----------------------------------------------------------------------
+Idx | Sepal (L, W) | Petal (L, W) | Actual Species  | Predicted Species | Status
+----------------------------------------------------------------------
+0   | 6.1, 2.8     | 4.7, 1.2     | Iris-versicolor | Iris-versicolor   | PASS
+2   | 7.7, 2.6     | 6.9, 2.3     | Iris-virginica  | Iris-virginica    | PASS
+9   | 5.8, 2.7     | 3.9, 1.2     | Iris-versicolor | Iris-versicolor   | PASS
+12  | 5.5, 3.5     | 1.3, 0.2     | Iris-setosa     | Iris-setosa       | PASS
+18  | 5.7, 2.8     | 4.5, 1.3     | Iris-versicolor | Iris-versicolor   | PASS
+21  | 6.1, 3.0     | 4.9, 1.8     | Iris-virginica  | Iris-virginica    | PASS
+28  | 4.8, 3.0     | 1.4, 0.3     | Iris-setosa     | Iris-setosa       | PASS
+29  | 4.8, 3.1     | 1.6, 0.2     | Iris-setosa     | Iris-setosa       | PASS
+----------------------------------------------------------------------
+Average Prediction Confidence: 100.0%
+Decision Surface: Optimal soft-margin hyperplane with non-linear RBF kernel.
+======================================================================
+Diagnostic Observation:
+The tuned SVM model cleanly partitions the feature space across all three
+species. The morphological distinction of Iris-setosa (small petals) is
+linearly separated with wide margin distance. Iris-versicolor and
+Iris-virginica, which partially overlap in linear sepal projections, are
+distinguished without error by the non-linear RBF transformation.
+======================================================================

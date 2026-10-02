@@ -1,0 +1,37 @@
+FINAL MODEL TEST RESULTS SUMMARY
+======================================================================
+Task: Task 3 - Housing Price Prediction (California Housing Dataset)
+Model: Tuned RandomForestRegressor
+Evaluation Dataset: Held-out Test Set (4,128 instances)
+Date: 2026-09-18
+======================================================================
+
+1. OVERALL TEST PERFORMANCE METRICS:
+----------------------------------------------------------------------
+- Root Mean Squared Error (RMSE): $49,666.10
+- Mean Absolute Error (MAE):     $32,027.45
+- R-squared (R2) Score:          0.8215
+
+2. SAMPLE PREDICTIONS TABLE (10 SELECTED INSTANCES):
+----------------------------------------------------------------------
+Index |   Actual Value | Predicted Value | Absolute Error | % Error
+----------------------------------------------------------------------
+  864 | $   159,800.00 | $    146,908.67 | $    12,891.33 |   8.07%
+ 1042 | $   295,200.00 | $    374,998.05 | $    79,798.05 |  27.03%
+ 1104 | $   329,600.00 | $    330,044.00 | $       444.00 |   0.13%
+ 1507 | $   500,001.00 | $    499,888.33 | $       112.67 |   0.02%
+ 1766 | $   155,000.00 | $     92,390.00 | $    62,610.00 |  40.39%
+ 1948 | $   102,800.00 | $    144,105.33 | $    41,305.33 |  40.18%
+ 2867 | $   128,100.00 | $    134,111.33 | $     6,011.33 |   4.69%
+ 2925 | $   210,100.00 | $    159,112.67 | $    50,987.33 |  24.27%
+ 3339 | $   366,700.00 | $    376,078.03 | $     9,378.03 |   2.56%
+ 4112 | $   237,900.00 | $    271,528.67 | $    33,628.67 |  14.14%
+----------------------------------------------------------------------
+Average Sample Absolute Error:   $29,716.68
+Average Sample Percentage Error: 16.15%
+======================================================================
+Diagnostic Observation:
+The model demonstrates strong predictive alignment across the bulk of the
+distribution. Residual variance increases around the artificial dataset ceiling
+at $500,001 where actual home values were capped during survey collection.
+======================================================================

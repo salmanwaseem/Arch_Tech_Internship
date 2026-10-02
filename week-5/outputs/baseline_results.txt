@@ -1,0 +1,32 @@
+===========================================================
+   California Housing Price Prediction - Baseline Model    
+   Model: Ordinary Least Squares (OLS) Linear Regression   
+   Internship: Arch Technologies - ML Domain (Month 2)     
+===========================================================
+
+Training Set Samples: 16,500
+Test Set Samples:     4,126
+Feature Count:        13
+Features Used:        ['median_income', 'ocean_proximity_INLAND', 'ocean_proximity_<1H OCEAN', 'bedrooms_per_room', 'rooms_per_household', 'ocean_proximity_NEAR BAY', 'ocean_proximity_NEAR OCEAN', 'total_rooms', 'housing_median_age', 'latitude', 'longitude', 'households', 'ocean_proximity_ISLAND']
+
+EVALUATION METRICS (TEST SET):
+  - Root Mean Squared Error (RMSE): $71,750.18
+  - Mean Absolute Error (MAE):      $52,006.98
+  - R^2 Score (Coefficient of Det.): 0.6274
+
+TRAINING SET METRICS (FOR OVERFITTING CHECK):
+  - Train RMSE:                      $70,668.59
+  - Train MAE:                       $51,423.83
+  - Train R^2:                        0.6214
+
+PERFORMANCE SUMMARY & WEEK 6 OUTLOOK:
+The baseline Linear Regression model accounts for approximately
+62.7% of the variance in California median house prices
+with a test RMSE of $71,750.18 and MAE of $52,006.98.
+The model shows no substantial overfitting (Train R^2 is comparable
+to Test R^2), but its predictive accuracy is constrained by linear
+assumptions over complex geographical interactions. In Week 6, non-linear
+ensemble methods (Random Forest and Gradient Boosting) along with systematic
+hyperparameter tuning will be implemented to capture spatial non-linearities
+and substantially reduce prediction error.
+===========================================================

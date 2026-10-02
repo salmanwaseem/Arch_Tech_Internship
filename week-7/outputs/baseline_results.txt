@@ -1,0 +1,66 @@
+===================================================================
+        Arch Technologies Internship - Machine Learning Domain     
+    Week 7: Task 4 - Iris Flower Classification (Baseline Model)    
+===================================================================
+
+MODEL ARCHITECTURE & CONFIGURATION:
+  - Model Type: Multinomial Logistic Regression
+  - Library: Scikit-learn (sklearn.linear_model.LogisticRegression)
+  - Feature Scaler: StandardScaler (Zero mean, Unit variance)
+  - Hyperparameters: max_iter=200, random_state=42, solver='lbfgs'
+  - Target Classes: 0: Iris-setosa, 1: Iris-versicolor, 2: Iris-virginica
+
+DATASET SPLIT SUMMARY:
+  - Total Samples:      150
+  - Training Instances: 120 (80.0%)
+  - Testing Instances:  30 (20.0%)
+  - Feature Dimension:  4
+  - Features:           ['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm']
+
+EVALUATION METRICS:
+  - Training Accuracy:  96.67% (0.9667)
+  - Testing Accuracy:   100.00% (1.0000)
+
+TEST SET CONFUSION MATRIX:
+  Actual \ Pred   Setosa  Versicolor  Virginica
+  Setosa            10      0           0        
+  Versicolor        0       9           0        
+  Virginica         0       0           11       
+
+TRAINING SET CONFUSION MATRIX (Overfitting & Boundary Analysis):
+  Actual \ Pred   Setosa  Versicolor  Virginica
+  Setosa            40      0           0        
+  Versicolor        0       38          3        
+  Virginica         0       1           38       
+
+DETAILED CLASSIFICATION REPORT (TEST SET):
+                 precision    recall  f1-score   support
+
+    Iris-setosa     1.0000    1.0000    1.0000        10
+Iris-versicolor     1.0000    1.0000    1.0000         9
+ Iris-virginica     1.0000    1.0000    1.0000        11
+
+       accuracy                         1.0000        30
+      macro avg     1.0000    1.0000    1.0000        30
+   weighted avg     1.0000    1.0000    1.0000        30
+
+INITIAL FINDINGS & CLASS SEPARABILITY ANALYSIS:
+1. Iris-setosa is completely linearly separable from the other two species,
+   achieving perfect 100% precision and 100% recall across both training and test
+   partitions. Morphologically, Setosa exhibits markedly shorter and narrower
+   petals (PetalLength < 2.0 cm, PetalWidth < 0.6 cm).
+
+2. Iris-versicolor and Iris-virginica represent the hardest pair to separate.
+   In training, 4 instances lie in the overlapping boundary region (3 Versicolor
+   predicted as Virginica, 1 Virginica predicted as Versicolor), yielding 96.67%
+   training accuracy. In the 30-sample test set, the linear hyperplane perfectly
+   partitions the evaluated points (100.0% test accuracy).
+
+3. Week 8 Transition Outlook:
+   While the baseline Logistic Regression model achieves strong accuracy, linear
+   decision boundaries are vulnerable to feature boundary overlap between
+   Versicolor and Virginica. In Week 8, non-linear classification algorithms
+   (K-Nearest Neighbors, Decision Trees, and Support Vector Machines with RBF
+   kernel) along with hyperparameter tuning will be implemented to evaluate
+   robust, non-linear margin separation.
+===================================================================

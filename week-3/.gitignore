@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+MNIST-Dataset/
+data/*.csv
+data/*.npy
+data/*.npz
+!data/.gitkeep
+!data/mnist_processed.npz
